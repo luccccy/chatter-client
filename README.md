@@ -20,7 +20,7 @@ The following reading will expose you to a lot of vocabulary having to do with H
 * The [Request Methods](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) section of Wikipedia's [Hypertext Transfer Protocol](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) page
 * [List of HTTP Status](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) Codes. Don't read this entirely, but at least look into what each of the NXX (e.g. 2XX, 3XX) sections mean.
 
-*Browser Security*
+**Browser Security**
 
 Read all about [Cross-site scripting (XSS)](https://owasp.org/www-community/attacks/xss/). You may find this Interactive Tutorial on [Cross-site scripting (XSS)](https://xss-game.appspot.com/) or this one [from Google](https://www.google.com/about/appsecurity/learning/xss/) useful. Note that these tutorials are pretty hard, you don't have to complete them if you don't find them useful.
 
@@ -92,12 +92,12 @@ To make this easier and less prone to breakage, we create a dummy file (which we
 
 To get your application running with the real API keys, follow these steps:
 
-Duplicate *client/env/config.example.js* renaming it to *client/env/config.js* in the process.
-NOTE: *client/env/config.js* is also ignored in your *.gitignore* so that the API keys you add won't be committed.
-Replace the placeholder strings in your newly created *client/env/config.js* with the keys delivered by staff.
-Update the *CAMPUS* variable with your campus identifier (ex: atx, nyc, la, sfm6, sfm8, hrr, rpt, etc).
+* Duplicate *client/env/config.example.js* renaming it to *client/env/config.js* in the process.
+  * NOTE: *client/env/config.js* is also ignored in your *.gitignore* so that the API keys you add won't be committed.
+* Replace the placeholder strings in your newly created *client/env/config.js* with the keys delivered by staff.
+* Update the *CAMPUS* variable with your campus identifier (ex: atx, nyc, la, sfm6, sfm8, hrr, rpt, etc).
 
-**Bare minimum requirements**
+# Bare minimum requirements
 
 **Install Pomander**
 
