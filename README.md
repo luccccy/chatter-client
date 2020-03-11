@@ -86,9 +86,9 @@ $.ajax({
 
 You should NEVER check in API Keys to version control. It's easy to accidentally commit sensitive data to your git repo if you're not careful. If you do so (and push to GitHub), everyone will have access to your private keys (which means they can mess with your data).
 
-A common practice (which we adopt here) is to prevent that by storing our API keys in a special file *config.js* (referenced in client/index.html) that we add to our *.gitignore* so that it's never committed to our repo. This means that after you clone down the repo, before running the app, you must re-create that special file and add your API keys to it or the app won't run.
+A common practice (which we adopt here) is to prevent that by storing our API keys in a special file *config.js* (referenced in *client/index.html*) that we add to our *.gitignore* so that it's never committed to our repo. This means that after you clone down the repo, before running the app, you must re-create that special file and add your API keys to it or the app won't run.
 
-To make this easier and less prone to breakage, we create a dummy file (which we do commit) in the correct format, and add placeholders for the real data within it. In this application, that dummy file is located at *client/env/config.example.js*.
+To make this easier and less prone to breakage, we create a dummy file (which we *do* commit) in the correct format, and add placeholders for the real data within it. In this application, that dummy file is located at *client/env/config.example.js*.
 
 To get your application running with the real API keys, follow these steps:
 
