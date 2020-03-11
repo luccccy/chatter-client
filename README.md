@@ -12,16 +12,17 @@ This assignment constitutes the beginning of a multi-sprint journey exploring cl
 * Gain exposure to some common Browser Security themes
 
 **Key HTTP Vocabulary**
+
 The following reading will expose you to a lot of vocabulary having to do with HTTP. You don't need to memorize these terms yet, but be prepared to revisit them and commit them to memory when you begin your job hunt as you can expect to be asked about them during phone screens.
 
-* Request-Response Communication
-* The HTTP Session section of Wikipedia's Hypertext Transfer Protocol page
-* The Request Methods section of Wikipedia's Hypertext Transfer Protocol page
-* List of HTTP Status Codes. Don't read this entirely, but at least look into what each of the NXX (e.g. 2XX, 3XX) sections mean.
+* [Request-Response Communication](https://en.wikipedia.org/wiki/Request%E2%80%93response)
+* The [HTTP Session](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#HTTP_session) section of Wikipedia's [Hypertext Transfer Protocol](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) page
+* The [Request Methods](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) section of Wikipedia's [Hypertext Transfer Protocol](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) page
+* [List of HTTP Status](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) Codes. Don't read this entirely, but at least look into what each of the NXX (e.g. 2XX, 3XX) sections mean.
 
 *Browser Security*
 
-Read all about Cross-site scripting (XSS). You may find this Interactive Tutorial on Cross-site scripting (XSS) or this one from Google useful. Note that these tutorials are pretty hard, you don't have to complete them if you don't find them useful.
+Read all about [Cross-site scripting (XSS)](https://owasp.org/www-community/attacks/xss/). You may find this Interactive Tutorial on [Cross-site scripting (XSS)](https://xss-game.appspot.com/) or this one [from Google](https://www.google.com/about/appsecurity/learning/xss/) useful. Note that these tutorials are pretty hard, you don't have to complete them if you don't find them useful.
 
 **Tools You'll Use**
 
@@ -40,17 +41,17 @@ We encourage you to try experimenting with some new features. Here are some sugg
 
 **Package Management**
 
-A package manager is a tool for automating the process of installing, upgrading, configuring and managing dependencies (underscore, jquery, etc) for projects. Most package managers run through a command-line interface.
+A [package manager](https://en.wikipedia.org/wiki/Package_manager) is a tool for automating the process of installing, upgrading, configuring and managing dependencies (underscore, jquery, etc) for projects. Most package managers run through a command-line interface.
 
 Today, you'll use a popular package manager called npm to install and keep track of the tools your client-side code requires.
 
 **Parse API**
 
-We've set up a remote server using the Parse platform. Later (as part of a different sprint) you'll build your own (local) server and replace the (remote) one you're using today.
+We've set up a remote server using the [Parse](http://parseplatform.org/) platform. Later (as part of a different sprint) you'll build your own (local) server and replace the (remote) one you're using today.
 
 Since you'll eventually reuse parts of your solution to this sprint, try to make your code readable/maintainable so that future-you doesn't get angry at present-you for making things messy.
 
-Parse has documented their REST API here. Please note that you will only need to use a small part of it. In the Quick Reference section, there's a heading named "Objects" that you'll need to refer to. You'll also need to refer to the Request Format section.
+Parse has documented their REST API [here](http://docs.parseplatform.org/rest/guide/). Please note that you will only need to use a small part of it. In the [Quick Reference](http://docs.parseplatform.org/rest/guide/#quick-reference) section, there's a heading named "Objects" that you'll need to refer to. You'll also need to refer to the [Request Format](http://docs.parseplatform.org/rest/guide/#quick-reference_request-format) section.
 
 Parse is a very generalized system and will allow you to store any kind of object you like. During this sprint, we'll be using it as a shared message server that everyone in the class can read and write from (via REST).
 
@@ -85,16 +86,16 @@ $.ajax({
 
 You should NEVER check in API Keys to version control. It's easy to accidentally commit sensitive data to your git repo if you're not careful. If you do so (and push to GitHub), everyone will have access to your private keys (which means they can mess with your data).
 
-A common practice (which we adopt here) is to prevent that by storing our API keys in a special file config.js (referenced in client/index.html) that we add to our .gitignore so that it's never committed to our repo. This means that after you clone down the repo, before running the app, you must re-create that special file and add your API keys to it or the app won't run.
+A common practice (which we adopt here) is to prevent that by storing our API keys in a special file *config.js* (referenced in client/index.html) that we add to our *.gitignore* so that it's never committed to our repo. This means that after you clone down the repo, before running the app, you must re-create that special file and add your API keys to it or the app won't run.
 
-To make this easier and less prone to breakage, we create a dummy file (which we do commit) in the correct format, and add placeholders for the real data within it. In this application, that dummy file is located at client/env/config.example.js.
+To make this easier and less prone to breakage, we create a dummy file (which we do commit) in the correct format, and add placeholders for the real data within it. In this application, that dummy file is located at *client/env/config.example.js*.
 
 To get your application running with the real API keys, follow these steps:
 
-Duplicate client/env/config.example.js renaming it to client/env/config.js in the process.
-NOTE: client/env/config.js is also ignored in your .gitignore so that the API keys you add won't be committed.
-Replace the placeholder strings in your newly created client/env/config.js with the keys delivered by staff.
-Update the CAMPUS variable with your campus identifier (ex: atx, nyc, la, sfm6, sfm8, hrr, rpt, etc).
+Duplicate *client/env/config.example.js* renaming it to *client/env/config.js* in the process.
+NOTE: *client/env/config.js* is also ignored in your *.gitignore* so that the API keys you add won't be committed.
+Replace the placeholder strings in your newly created *client/env/config.js* with the keys delivered by staff.
+Update the *CAMPUS* variable with your campus identifier (ex: atx, nyc, la, sfm6, sfm8, hrr, rpt, etc).
 
 **Bare minimum requirements**
 
@@ -110,7 +111,7 @@ It uses a pre-commit hook to run staged files through eslint before each commit.
 
 **npm**
 
-This sprint uses npm to manage its dependencies. npm comes bundled with Node, and is another JavaScript package manager that makes it easy for developers to share and reuse code. Even though npm started in the Node ecosystem, it is quickly becoming the default choice for sharing all types of JavaScript code.
+This sprint uses [npm](http://docs.parseplatform.org/rest/guide/#quick-reference_request-format) to manage its dependencies. npm comes bundled with Node, and is another JavaScript package manager that makes it easy for developers to share and reuse code. Even though npm started in the Node ecosystem, it is quickly becoming the default choice for sharing all types of JavaScript code.
 
 Here are a few tips to help get up and running:
 
@@ -124,18 +125,18 @@ Install this sprint's dependencies:
 
 **Separation of Concerns**
 
-As you write the functions that will power your chat applciation, consider what job each of these functions is doing and in which file that function should ideally live. Take note of times where you are mixing concerns and attempt to split functions up into smaller functions so that it's easier to place similar or related concerns together into one file.
+As you write the functions that will power your chat application, consider what job each of these functions is doing and in which file that function should ideally live. Take note of times where you are mixing concerns and attempt to split functions up into smaller functions so that it's easier to place similar or related concerns together into one file.
 
 The files included in this project suggest one possible arrangement for the separation of concerns and project organization. Use the proposed structure or refactor to one you find more intuitive.
 
 **Messages**
 
 Look inside the client/scripts folder and start coding.
-Display messages retrieved from the parse server.
-Read about Underscore's easy templating abilities, then create a template function to render a message to HTML. Alternatively, you may use jQuery to construct DOM nodes and compose them together to create the desired HTML output. Underscore's template system is quite extensive and you can read about it's advanced capabilities here.
-Be sure to use proper escaping on any user input. Since you're displaying input that other users have typed, your app is vulnerable to XSS attacks. See the section about escaping below.
+* Display messages retrieved from the parse server.
+  * Read about [Underscore's easy templating abilities](https://css-tricks.com/lodge/learn-jquery/24-templating-underscore/), then create a template function to render a message to HTML. Alternatively, you may use jQuery to construct DOM nodes and compose them together to create the desired HTML output. Underscore's template system is quite extensive and you can read about it's advanced capabilities here.
+  * Be sure to use proper escaping on any user input. Since you're displaying input that other users have typed, your app is vulnerable to XSS attacks. See the section about escaping below.
 
-**Note:** If you issue an XSS attack, you must make it innocuous enough to be educational, rather than disruptive. Basically you should scope your attacks to be console.logs or minor style changes. The following are not allowed:
+**Note:** If you issue an XSS attack, you must make it innocuous enough to be educational, rather than disruptive. Basically you should scope your attacks to be console.logs or minor style changes. The following are **not** allowed:
 
 * alerts or popups
 * adding or removing dom elements
@@ -147,7 +148,7 @@ Be sure to use proper escaping on any user input. Since you're displaying input 
 
 **A Note About Escaping**
 
-Escaping is the way we ensure that when users input things to our sites, we don't allow them to write our site's code for us. For example, what if someone's user name was <script>$('body').prepend('you got pwned')</script>? If we didn't escape, that 'user name' would get executed just like any other code, and all the sudden you'll have a new div on your site that says 'you got pwned', anytime that person's user name is displayed.
+Escaping is the way we ensure that when users input things to our sites, we don't allow them to write our site's code for us. For example, what if someone's user name was *<script>$('body').prepend('you got pwned')</script>?* If we didn't escape, that 'user name' would get executed just like any other code, and all the sudden you'll have a new div on your site that says 'you got pwned', anytime that person's user name is displayed.
 
 Now that might seem trivial, but understand that attacks like this can affect (or transmit) your users data too. That's not cool.
 
@@ -167,7 +168,7 @@ Display all messages sent by friends in bold or with highlight
 # ADVANCED CONTENT
 Our advanced content is intended to throw you in over your head, requiring you to solve problems with very little support or oversight, much like you would as a mid or senior level engineer. The following problem is no exception, and you may have to do a fair amount of work to get enough context to get started on the problem itself.
 
-For each of the features below, write new describe blocks, with tests, inside spec/chatterboxSpec.js before implementing.
+For each of the features below, write new *describe* blocks, with tests, inside *spec/chatterboxSpec.js* before implementing.
 
 * Construct a Parse query that responds with only messages from a specific room. Use this query to simplify your room filtering logic.
 * Allow users to have more than one room open at a time using tabs
@@ -182,4 +183,4 @@ Recognizing that there are constraints in place given that your classmates are n
 * The ability to follow other users, only displaying the messages of those you are following
 * The ability to 'heart' other users' messages
 * The ability to generate and display summary metrics on the activity of yourself and other users
-* Styling that looks as close as possible to an actual Twitter feed. You might consider the wildly popular CSS framework Bootstrap to help you out, especially since it was built at Twitter
+* Styling that looks as close as possible to an actual Twitter feed. You might consider the wildly popular CSS framework [Bootstrap](https://getbootstrap.com/) to help you out, especially since it was built at Twitter
