@@ -15,13 +15,16 @@ var App = {
     App.startSpinner();
     App.fetch(App.stopSpinner);
 
+    //setInterval(App.fetch, 1000);
+
   },
 
   fetch: function(callback = ()=>{}) {
     Parse.readAll((data) => {
       // examine the response from the server request:
       console.log(data);
-
+      Messages.update(data.results);
+      Rooms.update();
       callback();
     });
   },
